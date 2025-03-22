@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Control</title>
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Link to JavaScript -->
+    <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+    <h1>Smart Home Control</h1>
+    
+    <!-- Display Welcome Message -->
+    <p>Welcome, {{ current_user.username }}!</p>
+    
+    <!-- Logout Link -->
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <!-- Device List Container -->
+    <div id="device-list">Loading devices...</div>
+</body>
+</html>
